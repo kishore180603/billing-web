@@ -1,11 +1,9 @@
 .Billing {
-    border: 1px solid #ddd;
-    /* Border around the table container */
     max-width: 100%;
     /* Constrain table's width */
     overflow: hidden;
     /* Prevent overflow */
-    margin-bottom: 10px;
+    margin-top: 10px;
     /* Space below the table */
 }
 .tableclass{
@@ -34,7 +32,15 @@ th{
     background-color: #f9f9f9;
     width: 20%;
 }
-
+@media print {
+    button {
+        display: none;
+    }
+    .scrollable-tbody{
+        max-height: none;
+    }
+    /* Additional print-specific styles */
+}
 thead {
     display: table;
     /* Keep <thead> as a table element */

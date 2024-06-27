@@ -21,10 +21,13 @@ function Billing(){
             addRow();
         }
     }
-    const addGST18 = ()=>{
-        setTotal(Total*1.18);
-    };
+    const addGST18 = ()=>{setTotal(Total*1.18);};
     const addGST24 = ()=>{setTotal(Total*1.24);};
+
+    const printb = ()=>{
+        window.print();
+    }
+
     const addRow = ()=>{
         const newRow = {id:rows.length+1,item:'',quantity:0,price:0,pricekgpc:0};
         const Updatedrows = [...rows,newRow];
@@ -94,6 +97,7 @@ function Billing(){
         <button  onClick={addRow}>Add Item</button>
         <button onClick={addGST24}> Add GST 24%</button>
         <button onClick={addGST18}>Add GST 18%</button>
+        <button onClick={printb}>Print</button>
         </div>
         <h2>Total :{Total}</h2>
         <p>Thanks!visit again</p>

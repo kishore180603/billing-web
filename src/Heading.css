@@ -2,7 +2,7 @@
     display:flex;
     flex-direction: column;
     flex:0.25;
-    margin-bottom: 10px solid black;
+    border-bottom: 2px solid black;
 }
 .HeadingBody{
     display:grid;
